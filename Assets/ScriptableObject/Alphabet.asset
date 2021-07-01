@@ -13,81 +13,81 @@ MonoBehaviour:
   m_Name: Alphabet
   m_EditorClassIdentifier: 
   _SpriteInQuestion: 0
-  _interactiveObjects:
-  - NameObject: A
+  _interactiveItems:
+  - NameItem: A
     Sprite: {fileID: 4963718625464178563, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: B
+  - NameItem: B
     Sprite: {fileID: 7783457984840754399, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: C
+  - NameItem: C
     Sprite: {fileID: 3234300448368640894, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: D
+  - NameItem: D
     Sprite: {fileID: 7911670913450602933, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: E
+  - NameItem: E
     Sprite: {fileID: 4652326554734856401, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: F
+  - NameItem: F
     Sprite: {fileID: -6426668015567183463, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: G
+  - NameItem: G
     Sprite: {fileID: 216406037199867053, guid: 48b21e8d5586243478b115067608b9e8, type: 3}
-  - NameObject: H
+  - NameItem: H
     Sprite: {fileID: -8235857483100294123, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: I
+  - NameItem: I
     Sprite: {fileID: -3541686595128163680, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: J
+  - NameItem: J
     Sprite: {fileID: -2756605603065543306, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: K
+  - NameItem: K
     Sprite: {fileID: -1127063002332224934, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: L
+  - NameItem: L
     Sprite: {fileID: -5901097786099144959, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: M
+  - NameItem: M
     Sprite: {fileID: 3295844289267200183, guid: 48b21e8d5586243478b115067608b9e8,
       type: 3}
-  - NameObject: N
+  - NameItem: N
     Sprite: {fileID: 7112752472869403061, guid: 3c7ac89348cf2f94484541f6ca032707,
       type: 3}
-  - NameObject: O
+  - NameItem: O
     Sprite: {fileID: 5433449995169814141, guid: 3c7ac89348cf2f94484541f6ca032707,
       type: 3}
-  - NameObject: P
+  - NameItem: P
     Sprite: {fileID: -4252152113809563852, guid: 3c7ac89348cf2f94484541f6ca032707,
       type: 3}
-  - NameObject: Q
+  - NameItem: Q
     Sprite: {fileID: -4447791616812998045, guid: 3c7ac89348cf2f94484541f6ca032707,
       type: 3}
-  - NameObject: R
+  - NameItem: R
     Sprite: {fileID: -6342808464625005154, guid: 3c7ac89348cf2f94484541f6ca032707,
       type: 3}
-  - NameObject: S
+  - NameItem: S
     Sprite: {fileID: 8083504644574312765, guid: 3c7ac89348cf2f94484541f6ca032707,
       type: 3}
-  - NameObject: T
+  - NameItem: T
     Sprite: {fileID: -4461999128152558772, guid: 3c7ac89348cf2f94484541f6ca032707,
       type: 3}
-  - NameObject: U
+  - NameItem: U
     Sprite: {fileID: 3270655726746431581, guid: 3c7ac89348cf2f94484541f6ca032707,
       type: 3}
-  - NameObject: V
+  - NameItem: V
     Sprite: {fileID: -2983290644488427326, guid: 3c7ac89348cf2f94484541f6ca032707,
       type: 3}
-  - NameObject: W
+  - NameItem: W
     Sprite: {fileID: -9165466868132007793, guid: 3c7ac89348cf2f94484541f6ca032707,
       type: 3}
-  - NameObject: X
+  - NameItem: X
     Sprite: {fileID: 4461586319009975920, guid: 3c7ac89348cf2f94484541f6ca032707,
       type: 3}
-  - NameObject: Y
+  - NameItem: Y
     Sprite: {fileID: -5001085640463096552, guid: 498aa40ce7ce4854093cf15b5bfc3f1f,
       type: 3}
-  - NameObject: Z
+  - NameItem: Z
     Sprite: {fileID: 3539555106843919260, guid: 498aa40ce7ce4854093cf15b5bfc3f1f,
       type: 3}

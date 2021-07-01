@@ -7,18 +7,22 @@ using DG.Tweening;
 public class Cell : MonoBehaviour
 {
     public bool Answer;
-    public string Name=" ";
+    public string Name = " ";
     public Sprite Sprite;
+
     public event Action OnAnswer;
+
     public void Init(string name, Sprite sprite)
     {
         Name = name;
         Sprite = sprite;
     }
-    public void Init(bool answer)
+
+    public void InitaAnswer(bool answer)
     {
         Answer = answer;
     }
+
     private void OnEnable()
     {
         CellController.Instance.OnChangeCellData += CellInfo;
@@ -28,19 +32,22 @@ public class Cell : MonoBehaviour
             GameplayController.Instance.ActiveCells.Add(this);
         }
     }
+
     private void OnDisable()
     {
         CellController.Instance.OnChangeCellData -= CellInfo;
+
         if (GameplayController.Instance.ActiveCells.Contains(this))
         {
             GameplayController.Instance.ActiveCells.Remove(this);
         }
-       
     }
+
     public void CellInfo()
     {
         Debug.Log("Cell name: " + Name);
     }
+
     private void OnMouseDown()
     {
         if (!GameplayController.Instance.GameOver)
@@ -52,26 +59,30 @@ public class Cell : MonoBehaviour
                     GameplayController.Instance.StarEffect(gameObject.transform.localPosition);
                     GameplayController.Instance.PreviousAnswer = Name;
                     GameplayController.Instance.Level++;
+
                     Debug.Log("Correct answer!");
+
                     AnimationItem(Answer);
+
                     StartCoroutine(RightAnswer());
-                    StartCoroutine(ReloadTap(2f));
+                    StartCoroutine(GameplayController.Instance.ReloadTap(2f));
                 }
                 else
                 {
                     Debug.Log("Wrong answer...");
                     AnimationItem(Answer);
-                    StartCoroutine(ReloadTap(1f));
+                    StartCoroutine(GameplayController.Instance.ReloadTap(1f));
                 }
             }
         }
     }
-    
+
     public IEnumerator RightAnswer()
     {
         yield return new WaitForSeconds(2f);
         OnAnswer?.Invoke();
     }
+
     public void AnimationItem(bool answer)
     {
         var cellSprite = transform.GetChild(0);
@@ -88,11 +99,5 @@ public class Cell : MonoBehaviour
         {
             cellSprite.DOShakePosition(1, new Vector3(0.3f, 0, 0)).SetEase(Ease.InBounce);
         }
-    }
-    public IEnumerator ReloadTap(float seconds)
-    {
-        GameplayController.Instance.TapReload = true;
-        yield return new WaitForSeconds(seconds);
-        GameplayController.Instance.TapReload = false;
     }
 }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New GroupInteractiveObjects", menuName = "InteractiveObject")]
-public class GroupInteractiveObjects : ScriptableObject
+public class GroupInteractiveItems : ScriptableObject
 {
     [SerializeField] private bool _SpriteInQuestion;
-    [SerializeField] private InteractiveObject[] _interactiveObjects;
+    [SerializeField] private InteractiveItem[] _interactiveItems;
 
-    public InteractiveObject[] InteractiveObjects => _interactiveObjects;
+    public InteractiveItem[] InteractiveItems => _interactiveItems;
 }

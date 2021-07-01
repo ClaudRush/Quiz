@@ -149,10 +149,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bca3a194631bb4fb9b3ba1c0d0e1d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _manyRandomGroups: 1
   GroupsInteractiveObjects:
   - {fileID: 11400000, guid: d41db530d570f3346a14557926749856, type: 2}
   - {fileID: 11400000, guid: e1bb4c91a786d7d48a6306c4d878ca62, type: 2}
-  SelectGroup: {fileID: 0}
+  PrefabCell: {fileID: 954629035451016485, guid: f11e1f09b8552494db527d802770fa7b,
+    type: 3}
   _cells:
   - {fileID: 859817540}
   - {fileID: 1745819292}
@@ -163,8 +165,6 @@ MonoBehaviour:
   - {fileID: 316778609}
   - {fileID: 384765101}
   - {fileID: 1956553917}
-  FirstCellIndex: 3
-  LastCellIndex: 6
 --- !u!4 &170856395
 Transform:
   m_ObjectHideFlags: 0
@@ -1073,7 +1073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

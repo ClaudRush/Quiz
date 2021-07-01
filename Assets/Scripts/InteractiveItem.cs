@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class InteractiveObject
+public class InteractiveItem
 {
-    public string NameObject;
+    public string NameItem;
     public Sprite Sprite;
 }

@@ -13,18 +13,16 @@ public class GameplayController : MonoBehaviour
     [SerializeField] private GameObject _fadePanel;
     [SerializeField] private GameObject _starEffect;
 
-    private Cell _cellAnswer;
-    public Cell CellAnswer => _cellAnswer;
-
     public int Level;
     public bool GameOver;
     public bool TapReload;
 
+    private Cell _cellAnswer;
     private string _previousAnswer = " ";
     private int _randomCell;
+
     public List<Cell> ActiveCells { get; private set; }
     public string PreviousAnswer { get => _previousAnswer; set => _previousAnswer = value; }
-
 
     private void Awake()
     {
@@ -36,8 +34,6 @@ public class GameplayController : MonoBehaviour
 
         ActiveCells = new List<Cell>();
         Level = 1;
-        _randomCell = 0;
-        _fadePanel.GetComponent<Image>().color = new Color(255f, 255f, 255f, 0f);
     }
     
     public void SetTask()
@@ -54,15 +50,16 @@ public class GameplayController : MonoBehaviour
     public void InitAnswerCell()
     {
         _cellAnswer = ActiveCells[_randomCell];
-        _cellAnswer.Init(true);
+        _cellAnswer.InitaAnswer(true);
         _taskText.text = string.Format("Find {0}", _cellAnswer.Name);
-
         _cellAnswer.OnAnswer += CellController.Instance.ReloadCells;
+
         if (_previousAnswer == _cellAnswer.Name && !GameOver && Level != 1)
         {
             CellController.Instance.ReloadCells();
         }
     }
+
     public void StarEffect (Vector3 position)
     {
         var effect = Instantiate(_starEffect, position, Quaternion.identity);
@@ -77,18 +74,19 @@ public class GameplayController : MonoBehaviour
         GameOver = true;
         FadePanelAnimation(GameOver);
         _taskText.text = " ";
-        _restartPanel.gameObject.SetActive(true);
-
+        _restartPanel.SetActive(true);
     }
+
     public void RestartLevel()
     {
         SetTask();
         GameOver = false;
         FadePanelAnimation(GameOver);
-        _restartPanel.gameObject.SetActive(false);
+        _restartPanel.SetActive(false);
         LoadingBounce();
         TapReload = false;
     }
+
     public void LoadingBounce()
     {
         var bounceList = FindObjectsOfType<BounceEffect>();
@@ -107,6 +105,12 @@ public class GameplayController : MonoBehaviour
         {
             _fadePanel.GetComponent<Image>().DOColor(new Color(255f, 255f, 255f, 0f), 2f);
         }
-        
+    }
+
+    public IEnumerator ReloadTap(float seconds)
+    {
+        TapReload = true;
+        yield return new WaitForSeconds(seconds);
+        TapReload = false;
     }
 }

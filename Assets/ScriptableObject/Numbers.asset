@@ -13,34 +13,34 @@ MonoBehaviour:
   m_Name: Numbers
   m_EditorClassIdentifier: 
   _SpriteInQuestion: 0
-  _interactiveObjects:
-  - NameObject: 1
+  _interactiveItems:
+  - NameItem: 1
     Sprite: {fileID: 1422184923334757970, guid: b4cde20fb0e77a942a87b2e78e4596a3,
       type: 3}
-  - NameObject: 2
+  - NameItem: 2
     Sprite: {fileID: 1808195818850983521, guid: b4cde20fb0e77a942a87b2e78e4596a3,
       type: 3}
-  - NameObject: 3
+  - NameItem: 3
     Sprite: {fileID: -7900951133411543555, guid: b4cde20fb0e77a942a87b2e78e4596a3,
       type: 3}
-  - NameObject: 4
+  - NameItem: 4
     Sprite: {fileID: 2267071060405275165, guid: b4cde20fb0e77a942a87b2e78e4596a3,
       type: 3}
-  - NameObject: 5
+  - NameItem: 5
     Sprite: {fileID: -7398325283844340781, guid: b4cde20fb0e77a942a87b2e78e4596a3,
       type: 3}
-  - NameObject: 6
+  - NameItem: 6
     Sprite: {fileID: -7015292045520539579, guid: b4cde20fb0e77a942a87b2e78e4596a3,
       type: 3}
-  - NameObject: 7
+  - NameItem: 7
     Sprite: {fileID: 6501298950303736333, guid: 551ade45e0f634b4fb70fbb5d804cb56,
       type: 3}
-  - NameObject: 8
+  - NameItem: 8
     Sprite: {fileID: -3181606171480048652, guid: 551ade45e0f634b4fb70fbb5d804cb56,
       type: 3}
-  - NameObject: 9
+  - NameItem: 9
     Sprite: {fileID: -1155199509967091035, guid: 892717ac8fbeaaa468f285b998349a0d,
       type: 3}
-  - NameObject: 10
+  - NameItem: 10
     Sprite: {fileID: 4142021021139464533, guid: b3ee6f2cb0dd89e4c9926e5610567c85,
       type: 3}
